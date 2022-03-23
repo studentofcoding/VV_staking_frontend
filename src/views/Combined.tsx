@@ -67,9 +67,9 @@ const Combined: FC = () => {
                 setPdaAddress(pda);
             });   
         }
-        if(count > 0){
-            setNftActive();
-        }
+        // if(count > 0){
+        //     setNftActive();
+        // }
     }, [publicKey]);
 
     return (
