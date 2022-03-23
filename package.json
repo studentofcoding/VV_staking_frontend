@@ -1,7 +1,7 @@
 {
     "name": "@verdant-frontend/verdant-frontend",
     "version": "0.1.0",
-    "author": "Nick van Tilborg <ntilborg@gmail.com>",
+    "author": "Yonathan & Nick van Tilborg <ntilborg@gmail.com>",
     "repository": "https://github.com/ntilborg/verdant-frontend",
     "license": "Apache-2.0",
     "publishConfig": {

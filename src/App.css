@@ -1,8 +1,43 @@
 .App {
-    min-height: 100vh;
-    display: flex;
-    flex-grow: 1;
-    justify-content: center;
-    align-items: center;
-  }
+  min-height: 100vh;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.centered-component {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+}
+
+.bg {
+  /* background-color: rgb(31 41 55 / var(--tw-bg-opacity)); */
+  /* From https://css.glass */
+  background: rgba(44, 100, 111, 0.39);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+  border: 1px solid rgba(44, 100, 111, 0.03);
+}
+
+.gif {
+  background-image: url("../public/vv.gif");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: cover;
+  background-position: center;
+}
+
+.overflow {
+  overflow: scroll !important;
+  max-height: 100vh;
+}
 

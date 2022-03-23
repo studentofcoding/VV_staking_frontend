@@ -29,6 +29,7 @@ const Combined: FC = () => {
 
     let nftCol: any = [];
     let count = 0;
+    // let nft_activated = false;
 
     const maxStake = 4444;
 
@@ -46,17 +47,28 @@ const Combined: FC = () => {
                 count++;
             }
             nftCol.push(nft.mint);
-            return (<NFTCard key={nft.mint} nft={nft} staked={staked} />);
+            return (
+                // <div className="overflow grid grid-cols-3 gap-x-1 gap-y-1 m-2 border rounded-2xl w-2/3 bg">
+                    <NFTCard key={nft.mint} nft={nft} staked={staked} />
+                // </div>
+            );
         } else{
             return null;
         }
     }
+
+    // function setNftActive() {
+    //     return !nft_activated;
+    // }
 
     useEffect(() => {
         if(publicKey){
             getPdaAddress(publicKey).then(pda => {
                 setPdaAddress(pda);
             });   
+        }
+        if(count > 0){
+            setNftActive();
         }
     }, [publicKey]);
 
@@ -65,31 +77,48 @@ const Combined: FC = () => {
         <div className="flex mt-10 w-full justify-center">            
                 {publicKey && (
                     <>
-                    <div className="flex m-10 mt-16">
-                        <div className="grid grid-cols-5 gap-x-4 gap-y-5 m-2 border rounded-2xl border-stone-600 w-2/3 bg-stone-700">
-                        {nfts.map((nft: any) => (
-                            showNft(nft, false)
-                        ))}
-                        {pdanfts.map((nft: any) => (
-                            showNft(nft, true)
-                        ))}
-                        {count == 0 && <p className="m-5">None</p>}
-                        </div>
-                        <div className="flex border w-1/3 place-content-center rounded-2xl border-stone-600 m-2 bg-stone-700 p-5">
-                            <Claim />
-                        </div>  
-                        
-                    </div>
-                    <div className="absolute top-2 flex-vertical m-3 text-center">
-                        <p className="text-2xl">Verdant Vtopia Staking</p>
-                        <p>Total NFTs in wallet: {count}</p>
-                    </div>
+                        <>
+                            <div className="flex m-10 mt-16">
+                                <div className="overflow grid grid-cols-3 gap-x-1 gap-y-1 m-2 border rounded-2xl w-2/3 bg">
+                                {nfts.map((nft: any) => (
+                                    showNft(nft, false)
+                                ))}
+                                {pdanfts.map((nft: any) => (
+                                    showNft(nft, true)
+                                ))}
+                                
+                                </div>
+                                {count > 0 && 
+                                <div className="flex border w-1/3 place-content-center rounded-2xl m-2 bg p-5">
+                                    <Claim/>
+                                </div>}  
+                                
+                            </div>
+                            {count == 0 && <div className="flex flex-col w-2/3 rounded-2xl bg">
+                                <div className="grid rounded-2xl bg w-full">
+                                    <div className="centered-component">
+                                        <img className="gif" alt="NFT's Collection" width="500" height="500"/>
+                                    </div>
+                                <a href="/"
+                                    className="text-white font-bold no-underline hover:underline"
+                                    ><p className="centered-component text-xl justify-center w-full flex">
+                                    You have no Verdant Vtopias, 
+                                    buy here to Join
+                                </p></a>
+                                </div>
+                            </div>}
+                            
+                            <div className="absolute top-2 flex-vertical m-3 text-center">
+                                <p className="text-2xl bold">Verdant Vtopia Staking</p>
+                                <p>Total NFTs in wallet: {count}</p>
+                            </div>
+                        </>
                     </>
                 ) 
                 ||
                 (
-                    <div className="flex flex-col w-2/3 border rounded-2xl border-stone-600 bg-stone-700">
-                        <p className="text-center ml-32 mt-32 mr-32">VV Community Staked {config.stakeCount * 1}/{maxStake}</p>
+                    <div className="flex flex-col w-2/3 border rounded-2xl bg">
+                        <p className="text-center bold text-2xl mb-5 ml-32 mt-20 mr-32">{config.stakeCount * 1} out of {maxStake} Verdant Vtopians Communion so far</p>
                         <div className="w-full pl-32 pr-32 pb-20">
                             <div className="w-full bg-gray-800 rounded-full h-5 dark:bg-gray-800">
                                 <div className="bg-purple-700 h-5 rounded-full" style={{ width: `${config.stakeCount / maxStake * 100}%`}} />

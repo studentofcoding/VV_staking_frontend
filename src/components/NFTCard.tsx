@@ -233,18 +233,20 @@ const NFTCard: FC<NFTProps> = ({nft, staked}) => {
 
       //The card
       const nftCard = 
-        (<div className="flex flex-col p-2">
-        {staked && (<img className="rounded-xl shadow-stone-900 shadow-lg outline outline-gray-900 outline-2" src={imageLink} />)  || (<img className="rounded-xl shadow-stone-900 shadow-lg" src={imageLink} />) }
-        <p className="text-center">{nft.data.name}</p>
-        <p className="text-center"> Level: {rarity && rarity.level}</p>
-        <p className="text-center"> Rarity: {rarity && ((rarity.rarity == 1)  && "Common" || "Legendary") || "No rarity"}</p>
-        { (timeToUnstake > 0) && (<p className="text-center"> Hours to unstake: {(timeToUnstake / 3600).toFixed(0)}</p>) }
-        {staked && 
-          <button className="bg-purple-500 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded-full ml-4 mr-4 mt-1" onClick={unstake} disabled={(timeToUnstake > 0)}>Unstake</button>
-         || 
-          <button className="bg-purple-700 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded-full ml-4 mr-4 mt-1" onClick={stake}>Stake</button>
-         } 
-        </div>);
+        (
+          <div className="flex flex-col pb-3 p-6">
+            {staked && (<img className="rounded-xl shadow-stone-900 shadow-lg outline outline-gray-900 outline-2" src={imageLink} />)  || (<img className="rounded-xl shadow-stone-900 shadow-lg" src={imageLink} />) }
+            <p className="text-center bold text-xl pt-5">{nft.data.name}</p>
+            <p className="text-center"> Class: {rarity && ((rarity.rarity == 1)  && "Common" || "Legendary") || "-"}</p>
+            <p className="text-center"> Level: {rarity && rarity.level}</p>
+            { (timeToUnstake > 0) && (<p className="text-center"> Hours to unstake: {(timeToUnstake / 3600).toFixed(0)}</p>) }
+            {staked && 
+              <button className="bg-purple-500 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded-full ml-4 mr-4 mt-1" onClick={unstake} disabled={(timeToUnstake > 0)}>Unstake</button>
+            || 
+              <button className="bg-purple-700 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded-full ml-4 mr-4 mt-1" onClick={stake}>Stake</button>
+            } 
+          </div>
+        );
 
     return ( 
       nftCard

@@ -42,12 +42,12 @@ const StakeBar: FC = () => {
 
     return (
         <div className="absolute top-0 left-0 flex space-x-6 m-4">
-          <div className="w-40">
+          {/* <div className="w-40">
             Staked {stakeCount}/{maxStake}
             <div className="w-full bg-gray-200 rounded-full h-5 dark:bg-gray-700">
               <div className="bg-purple-700 h-5 rounded-full" style={{ width: `${stakePercentage}%`}} />
             </div>
-          </div>
+          </div> */}
         </div>
     )
 }

@@ -194,28 +194,28 @@ const Claim: FC = () => {
 
     return (
         <div className="flex flex-col justify-center items-center">
-            <p className="text-2xl">Claiming</p> 
+            {/* <p className="text-2xl">Claiming</p>  */}
             <table className="table-fixed content-center">
             <tbody>
             <tr>
-            <td className="p-2 text-right">Amount staked:</td>
-            <td className="p-2">{amount_staked}</td>
+            <td className="p-1 text-right">Total Communions:</td>
+            <td className="p-1">{amount_staked}</td>
             </tr>
             <tr>
-            <td className="p-2 text-right">Rewards per day:</td>
-            <td className="p-2">{(rewardPerDay).toFixed(3)} Verdant</td>
+            <td className="p-1 text-right">Rewards per day:</td>
+            <td className="p-1">{(rewardPerDay).toFixed(2)} $verdant</td>
             </tr>
             <tr>
-            <td className="p-2 text-right">Rewards payout history:</td>
-            <td className="p-2">{reward_history.toFixed(3)} Verdant</td>
+            <td className="p-1 text-right">Rewards payout history:</td>
+            <td className="p-1">{reward_history.toFixed(2)} $verdant</td>
             </tr>
             <tr>
-            <td className="p-2 text-right">Pending rewards: </td>
-            <td className="p-2">{pending_rewards.toFixed(4)} Verdant</td>
+            <td className="p-1 text-right">Pending rewards: </td>
+            <td className="p-1">{pending_rewards.toFixed(2)} $verdant</td>
             </tr>
             </tbody>
             </table>
-            <button className="bg-purple-700 hover:bg-purple-900 text-white font-bold py-2 px-4 rounded-full ml-8 mr-8 mt-6 pr-16 pl-16" onClick={claim}>Claim {pending_rewards.toFixed(3)} Verdant</button>
+            <button className="bg-purple-700 hover:bg-purple-900 text-white font-bold py-2 px-4 rounded-full ml-8 mr-8 mt-6 pr-16 pl-16" onClick={claim}>Claim {pending_rewards.toFixed(2)} $verdant</button>
         </div>
     );
 };
