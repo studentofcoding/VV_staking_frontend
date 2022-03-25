@@ -97,7 +97,7 @@ const Combined: FC = () => {
                             {count == 0 && <div className="flex flex-col w-2/3 rounded-2xl bg">
                                 <div className="grid rounded-2xl bg w-full">
                                     <div className="centered-component">
-                                        <img className="gif" alt="NFT's Collection" width="500" height="500"/>
+                                        <img className="gif" width="500" height="500"></img>
                                     </div>
                                 <a href="/"
                                     className="text-white font-bold no-underline hover:underline"

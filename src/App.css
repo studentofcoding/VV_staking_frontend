@@ -34,6 +34,7 @@
   background-size: 100%;
   background-attachment: cover;
   background-position: center;
+  border: 1px solid rgba(44, 100, 111, 0.03);
 }
 
 .overflow {
