@@ -43,6 +43,7 @@ const NFTCard: FC<NFTProps> = ({nft, staked}) => {
           }
           return undefined;
         });
+        
 
   }, [connection, publicKey, rarity]);
 
@@ -228,6 +229,7 @@ const NFTCard: FC<NFTProps> = ({nft, staked}) => {
           getStakeInfo();
         }
         getRarityData();
+        // console.log(getRarityData());
       },[]);
 
 
@@ -235,7 +237,7 @@ const NFTCard: FC<NFTProps> = ({nft, staked}) => {
       const nftCard = 
         (
           <div className="flex flex-col pb-3 p-6">
-            {staked && (<img className="rounded-xl shadow-stone-900 shadow-lg outline outline-gray-900 outline-2" src={imageLink} />)  || (<img className="rounded-xl shadow-stone-900 shadow-lg" src={imageLink} />) }
+            {staked && (<img className="rounded-xl shadow-stone-500 shadow-lg" src={imageLink} />)  || (<img className="rounded-xl shadow-stone-500 shadow-lg" src={imageLink} />) }
             <p className="text-center bold text-xl pt-5">{nft.data.name}</p>
             <p className="text-center"> Class: {rarity && ((rarity.rarity == 1)  && "Common" || "Legendary") || "-"}</p>
             <p className="text-center"> Level: {rarity && rarity.level}</p>

@@ -520,7 +520,7 @@ export async function createClaimInstruction(
     {
       pubkey: toPublicKey(tokenAddress),
       isSigner: false,
-      isWritable: false,
+      isWritable: true,
     },
     {
       pubkey: toPublicKey(tokenVaultAddress),
