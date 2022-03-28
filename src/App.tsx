@@ -75,12 +75,12 @@ const Context: FC<{ children: ReactNode }> = ({ children }) => {
     // The network can be set to 'devnet', 'testnet', or 'mainnet-beta'.
     const network = WalletAdapterNetwork.Mainnet;
     const connectionWithoutWallet  = new Connection(
-        clusterApiUrl('mainnet-beta'),
+        'https://ssc-dao.genesysgo.net/',
         'confirmed',
     );
 
     // You can also provide a custom RPC endpoint.
-    const endpoint = useMemo(() => clusterApiUrl(network), [network]);
+    const endpoint = useMemo(() => "https://ssc-dao.genesysgo.net/", [network]);
 
     const getConfigData = useCallback(async () => {   
         let configDataAccount = GetAccountData(connectionWithoutWallet, STAKE_CONFIG_PUBKEY);
