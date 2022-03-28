@@ -243,9 +243,9 @@ const NFTCard: FC<NFTProps> = ({nft, staked}) => {
             <p className="text-center"> Level: {rarity && rarity.level}</p>
             { (timeToUnstake > 0) && (<p className="text-center"> Hours to unstake: {(timeToUnstake / 3600).toFixed(0)}</p>) }
             {staked && 
-              <button className="bg-purple-500 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded-full ml-4 mr-4 mt-1" onClick={unstake} disabled={(timeToUnstake > 0)}>Unstake</button>
+              <button className="bg-purple-500 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded-full ml-4 mr-4 mt-1" onClick={unstake} disabled={(timeToUnstake > 0)}>Leave Union</button>
             || 
-              <button className="bg-purple-700 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded-full ml-4 mr-4 mt-1" onClick={stake}>Stake</button>
+              <button className="bg-purple-700 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded-full ml-4 mr-4 mt-1" onClick={stake}>Join Union</button>
             } 
           </div>
         );

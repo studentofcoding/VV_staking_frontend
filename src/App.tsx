@@ -73,9 +73,9 @@ const Context: FC<{ children: ReactNode }> = ({ children }) => {
 
 
     // The network can be set to 'devnet', 'testnet', or 'mainnet-beta'.
-    const network = WalletAdapterNetwork.Devnet;
+    const network = WalletAdapterNetwork.Mainnet;
     const connectionWithoutWallet  = new Connection(
-        clusterApiUrl('devnet'),
+        clusterApiUrl('mainnet-beta'),
         'confirmed',
     );
 

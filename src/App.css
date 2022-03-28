@@ -42,3 +42,22 @@
   max-height: 100vh;
 }
 
+.badge {
+  box-sizing: border-box;
+  display: inline-block;
+  background-color: #487b81;
+  color: white !important;
+  
+  border-radius: 2rem; 
+  text-align: center;
+
+  font-size: 1rem;
+  font-weight: 400;
+  padding: .05rem .8rem .1rem;
+  margin-left: 0.5rem;
+  line-height: inherit;
+}
+
+.badge--warning {
+  background-color: #487b81;
+}

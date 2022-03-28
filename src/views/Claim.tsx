@@ -198,7 +198,7 @@ const Claim: FC = () => {
             <table className="table-fixed content-center">
             <tbody>
             <tr>
-            <td className="p-1 text-right">Total Communions:</td>
+            <td className="p-1 text-right">NFT's in Union:</td>
             <td className="p-1">{amount_staked}</td>
             </tr>
             <tr>
