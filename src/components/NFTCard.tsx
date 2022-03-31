@@ -238,7 +238,7 @@ const NFTCard: FC<NFTProps> = ({nft, staked}) => {
         (
           <div className="flex flex-col pb-3 p-6">
             {staked && (<img className="rounded-xl shadow-stone-500 shadow-lg" src={imageLink} />)  || (<img className="rounded-xl shadow-stone-500 shadow-lg" src={imageLink} />) }
-            <p className="text-center bold text-xl pt-5">{nft.data.name}</p>
+            <p className="text-center bold md:text-xl text-md pt-5">{nft.data.name}</p>
             <p className="text-center"> Class: {rarity && ((rarity.rarity == 1)  && "Common" || "Legendary") || "-"}</p>
             <p className="text-center"> Level: {rarity && rarity.level}</p>
             { (timeToUnstake > 0) && (<p className="text-center"> Days to unstake: {(timeToUnstake / 3600 / 24).toFixed(0)}</p>) }

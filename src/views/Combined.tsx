@@ -78,8 +78,8 @@ const Combined: FC = () => {
                 {publicKey && (
                     <>
                         <>
-                            <div className="flex m-10 mt-16">
-                                <div className="overflow grid grid-cols-3 gap-x-1 gap-y-1 m-2 border rounded-2xl w-2/3 bg">
+                            <div className="flex flex-mobile lg:m-10 m-2 lg:mt-16 mt-20">
+                                <div className="overflow grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-1 gap-y-1 m-2 border rounded-2xl lg:w-2/3 bg">
                                 {nfts.map((nft: any) => (
                                     showNft(nft, false)
                                 ))}
@@ -89,7 +89,7 @@ const Combined: FC = () => {
                                 
                                 </div>
                                 {count > 0 && 
-                                <div className="flex border w-1/3 place-content-center rounded-2xl m-2 bg p-5">
+                                <div className="flex border lg:w-1/3 place-content-center rounded-2xl m-2 bg p-5">
                                     <Claim/>
                                 </div>}  
                                 

@@ -145,7 +145,7 @@ const CombinedContent: FC = () => {
     return (
         <div className="App">
             {publicKey && <StakeBar />}
-            <div className="absolute top-0 right-0 flex space-x-4 m-3"><WalletMultiButton /></div>
+            <div className="absolute lg:top-0 top-14 lg:right-0 right-50 flex space-x-4 lg:m-3 m-6"><WalletMultiButton /></div>
             
             <Combined />
         </div>

@@ -61,3 +61,9 @@
 .badge--warning {
   background-color: #487b81;
 }
+
+@media (max-width: 1023px) {
+  .flex-mobile {
+    flex-direction: column;
+  }
+}
