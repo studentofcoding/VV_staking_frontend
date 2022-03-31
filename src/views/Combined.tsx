@@ -121,9 +121,9 @@ const Combined: FC = () => {
                 ||
                 (
                     <div className="flex flex-col w-2/3 border rounded-2xl bg">
-                        <p className="text-center bold text-2xl mb-5 ml-32 mt-20 mr-32">
+                        <p className="text-center bold md:text-2xl text-md mb-5 lg:ml-32 mt-20 lg:mr-32 m-20">
                             {config.stakeCount * 1} out of {maxStake} Verdant Vtopians are joined the Union so far</p>
-                        <div className="w-full pl-32 pr-32 pb-20">
+                        <div className="w-full lg:pl-32 lg:pr-32 pb-20 pl-12 pr-12">
                             <div className="w-full bg-gray-800 rounded-full h-5 dark:bg-gray-800">
                                 <div className="bg-purple-700 h-5 rounded-full" style={{ width: `${config.stakeCount / maxStake * 100}%`}} />
                                 {/* <div className="bg-purple-700 h-5 rounded-full" style={{ width: `${0 / maxStake * 100}%`}} /> */}
