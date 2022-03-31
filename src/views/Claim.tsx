@@ -215,8 +215,8 @@ const Claim: FC = () => {
             </tr>
             </tbody>
             </table>
-            {/* <button disabled className="bg-purple-700 hover:bg-purple-900 text-white font-bold py-2 px-4 rounded-full ml-8 mr-8 mt-6 pr-16 pl-16" onClick={claim}>Claim {pending_rewards.toFixed(2)} $verdant</button> */}
-            <button disabled className="bg-purple-700 hover:bg-purple-900 text-white font-bold py-2 px-4 rounded-full ml-8 mr-8 mt-6 pr-16 pl-16" onClick={claim}>Claimed are disabled</button>
+            <button className="bg-purple-700 hover:bg-purple-900 text-white font-bold py-2 px-4 rounded-full ml-8 mr-8 mt-6 pr-16 pl-16" onClick={claim}>Claim {pending_rewards.toFixed(2)} $verdant</button>
+            {/* <button disabled className="bg-purple-700 hover:bg-purple-900 text-white font-bold py-2 px-4 rounded-full ml-8 mr-8 mt-6 pr-16 pl-16" onClick={claim}>Claimed are disabled</button> */}
         </div>
     );
 };
