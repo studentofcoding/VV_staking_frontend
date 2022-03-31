@@ -202,6 +202,10 @@ const Claim: FC = () => {
             <td className="p-1">{amount_staked}</td>
             </tr>
             <tr>
+            <td className="p-1 text-right">Lockup period:</td>
+            <td className="p-1">14 days</td>
+            </tr>
+            <tr>
             <td className="p-1 text-right">Rewards per day:</td>
             <td className="p-1">{(rewardPerDay).toFixed(2)} $verdant</td>
             </tr>
