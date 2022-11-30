@@ -75,7 +75,7 @@ const Context: FC<{ children: ReactNode }> = ({ children }) => {
     // The network can be set to 'devnet', 'testnet', or 'mainnet-beta'.
     const network = WalletAdapterNetwork.Mainnet;
     const connectionWithoutWallet  = new Connection(
-        'https://ssc-dao.genesysgo.net/',
+        'https://api.mainnet-beta.solana.com',
         'confirmed',
     );
 
