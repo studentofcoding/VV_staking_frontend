@@ -29,8 +29,8 @@
         "nuke": "shx rm -rf node_modules yarn.lock"
     },
     "dependencies": {
-        "@emotion/react": "^11.7.1",
-        "@emotion/styled": "^11.6.0",
+        "@emotion/react": "^11.10.5",
+        "@emotion/styled": "^11.10.5",
         "@nfteyez/sol-rayz-react": "^0.10.0",
         "@solana/wallet-adapter-base": "^0.9.3",
         "@solana/wallet-adapter-react": "^0.15.3",
@@ -39,11 +39,12 @@
         "@solana/web3.js": "^1.31.0",
         "@types/bs58": "^4.0.1",
         "jotai": "^1.6.0",
-        "notistack": "^2.0.3",
+        "notistack": "^2.0.8",
         "react": "^17.0.0",
         "react-dom": "^17.0.0"
     },
     "devDependencies": {
+        "@mui/material": "^5.11.2",
         "@types/eslint": "^8.2.2",
         "@types/eslint-plugin-prettier": "^3.1.0",
         "@types/node": "^17.0.17",
