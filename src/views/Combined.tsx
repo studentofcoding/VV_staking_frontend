@@ -99,12 +99,9 @@ const Combined: FC = () => {
                                     <div className="centered-component">
                                         <img className="gif" width="500" height="500"></img>
                                     </div>
-                                {/* <a href="https://mint.verdantvtopia.com/"
-                                    className="text-white font-bold no-underline hover:underline"
-                                    ><p className="centered-component text-xl justify-center w-full flex">
-                                    You have no Verdant Vtopias, 
-                                    mint one here
-                                </p></a> */}
+                                <p className="centered-component text-xl justify-center w-full flex">
+                                    You have no Verdant Vtopias NFT
+                                </p>
                                 </div>
                             </div>}
                             
