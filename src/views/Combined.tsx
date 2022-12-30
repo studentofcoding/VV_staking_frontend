@@ -78,7 +78,7 @@ const Combined: FC = () => {
                 {publicKey && (
                     <>
                         <>
-                            <div className="flex flex-mobile lg:m-10 m-2 lg:mt-16 mt-20">
+                            {count > 0 && <div className="flex flex-mobile lg:m-10 m-2 lg:mt-16 mt-20">
                                 <div className="overflow grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-1 gap-y-1 m-2 border rounded-2xl lg:w-2/3 bg">
                                 {nfts.map((nft: any) => (
                                     showNft(nft, false)
@@ -88,23 +88,23 @@ const Combined: FC = () => {
                                 ))}
                                 
                                 </div>
-                                {count > 0 && 
+                                
                                 <div className="flex border lg:w-1/3 place-content-center rounded-2xl m-2 bg p-5">
                                     <Claim/>
-                                </div>}  
+                                </div> 
                                 
-                            </div>
+                            </div>}
                             {count == 0 && <div className="flex flex-col w-2/3 rounded-2xl bg">
                                 <div className="grid rounded-2xl bg w-full">
                                     <div className="centered-component">
                                         <img className="gif" width="500" height="500"></img>
                                     </div>
-                                <a href="https://mint.verdantvtopia.com/"
+                                {/* <a href="https://mint.verdantvtopia.com/"
                                     className="text-white font-bold no-underline hover:underline"
                                     ><p className="centered-component text-xl justify-center w-full flex">
                                     You have no Verdant Vtopias, 
                                     mint one here
-                                </p></a>
+                                </p></a> */}
                                 </div>
                             </div>}
                             

@@ -75,7 +75,7 @@ const Context: FC<{ children: ReactNode }> = ({ children }) => {
     // The network can be set to 'devnet', 'testnet', or 'mainnet-beta'.
     const network = WalletAdapterNetwork.Mainnet;
     const connectionWithoutWallet  = new Connection(
-        'https://api.mainnet-beta.solana.com',
+        'https://api.metaplex.solana.com/',
         'confirmed',
     );
 
