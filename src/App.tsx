@@ -75,12 +75,12 @@ const Context: FC<{ children: ReactNode }> = ({ children }) => {
     // The network can be set to 'devnet', 'testnet', or 'mainnet-beta'.
     const network = WalletAdapterNetwork.Mainnet;
     const connectionWithoutWallet  = new Connection(
-        'https://api.metaplex.solana.com/',
+        'https://solana-mainnet.g.alchemy.com/v2/e7nC8-Cs8rdYyWIL6BgdsPnFGejlWqDb',
         'confirmed',
     );
 
     // You can also provide a custom RPC endpoint.
-    const endpoint = useMemo(() => "https://ssc-dao.genesysgo.net/", [network]);
+    const endpoint = useMemo(() => "https://solana-mainnet.g.alchemy.com/v2/e7nC8-Cs8rdYyWIL6BgdsPnFGejlWqDb", [network]);
 
     const getConfigData = useCallback(async () => {   
         let configDataAccount = GetAccountData(connectionWithoutWallet, STAKE_CONFIG_PUBKEY);
